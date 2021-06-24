@@ -1,0 +1,52 @@
+@use "../abstracts" as *;
+@use "../base" as *;
+
+.projects{
+    display: flex;
+    flex-direction: column;
+    h1{
+        font-size:9vw;
+        font-family: map-get($font,'primary');
+        font-style: italic;
+    }
+    .project{
+        position: relative;
+        margin:4em 0;
+        flex-direction: column;
+        &:hover img{
+            filter: grayscale(0);
+        }
+        &::after{
+            pointer-events: none; //So that images are clickeble
+            @include stylesForPseudoElement($content:"",$width:100%,$height:100%,$top:0,$left:0);
+            background-image: linear-gradient(to top,map-get($colors,'primary') 10%,transparent);
+        }
+        img{
+            width:75%;
+            max-width:80%;
+            filter: grayscale(100%);
+            @include createTransition($property:all,$time:map-get($transitionTime,'med'),$timingFunc:linear);
+        }
+        .project__details{
+            z-index:map-get($zIndex,'above');
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            text-align: left;
+            align-content: flex-start;
+            padding: 1em 7em;
+            .project__heading{
+                font-size:2rem;
+                font-family: map-get($font,'secondary');
+               
+            }
+            .project__para{
+                font-size: 1.4rem;
+                font-family: map-get($font,'linktext');
+                
+            }
+        }
+       
+    }
+
+}

@@ -1,0 +1,36 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+@use "../abstracts" as *;
+@use "../base" as *;
+.header{
+    position: absolute;
+    top:0;
+    left:0;
+    display: flex;
+    justify-content: space-between;
+    width:98vw;
+    padding:1em 1.5em;
+    height:6em;
+    z-index:map-get($zIndex,'above');
+    &__heading{
+        overflow: hidden;
+        margin: 2.3em 0 0 4em;
+        font-family: map-get($font,'secondary');
+        text-decoration: underline;
+    }
+}
+
+.short__links{
+    display: flex;
+    li{
+        margin:1.3em 0.7em;
+        a{
+            color:map-get($colors,'secondary');
+            .fab,
+            .fas{
+                font-size: 1.8rem;
+            }
+        }
+    }
+}

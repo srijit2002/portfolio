@@ -1,0 +1,27 @@
+@use "../abstracts" as *;
+@use "../base" as *;
+
+.social__icons__wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+   
+    li{
+        color:map-get($colors,'secondary');
+        font-family: map-get($font,linktext);
+        .fas,.fab{
+            font-size: 1.8rem;
+            margin-right: 0.5em;
+        }
+        a{
+            color:map-get($colors,'secondary');
+        }
+    }
+    .social__links{
+        justify-content: flex-start;
+        margin: 0.3em 0;
+        :hover{
+            text-decoration: underline;
+        }
+    }
+}

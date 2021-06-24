@@ -1,0 +1,51 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+// -----------------------------------------------------------------------------
+@use "../abstracts" as *;
+@use "../base" as *;
+
+.footer{
+    margin-top:2em;
+    padding:3em;
+    background-color: map-get($colors,'bgtext');
+   
+    &__heading{
+        position: relative;
+        text-align: center;
+        font-family: map-get($font,'secondary');
+        font-size:4vw;
+        &::before{
+            @include stylesForPseudoElement($content:"",$width:20%,$height:0.2rem,$top:100%,$left:30%);
+            background-color: map-get($colors,'secondary');
+            transform: translate(-50%,-50%);
+        }
+    }
+    &__data{
+        display: flex;
+        justify-content: space-evenly;
+        flex-flow: row wrap;
+        margin-top: 4em;
+    }
+}
+.form{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-flow:column wrap;
+    min-width:55vw;
+    &__contact{
+        display: flex;
+        justify-content: space-between;
+        flex-flow: row nowrap;
+        width:100%;
+    }
+    &__des{
+        margin: 0.9em 0;
+        width:100%;
+    }
+    &__name{
+        margin-right: 0.9em;
+        width:100%;
+    }
+}
+       

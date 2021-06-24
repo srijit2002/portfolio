@@ -1,0 +1,22 @@
+@use "../abstracts" as *;
+@use "../base" as *;
+.navbar{
+    height:100vh;
+    padding:6em;
+    margin-top: 1em;
+    ul li a h2{
+        overflow: hidden;
+        font-size:9vw;
+        line-height: 1.1;
+        font-family: map-get($font,'primary');
+        color:map-get($colors,'secondary');
+        @include createTransition($property:all,$time:map-get($transitionTime,fas),$timingFunc:ease);
+        &:hover{
+            color:scale-color($color:#000,$lightness: 95%);
+            @supports(-webkit-text-stroke:2px map-get($colors,'secondary')){
+                color:transparent;
+                -webkit-text-stroke:2px map-get($colors,'secondary');
+            }
+        }
+    }
+}

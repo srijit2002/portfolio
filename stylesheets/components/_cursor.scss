@@ -1,0 +1,22 @@
+@use "../abstracts" as *;
+@use "../base" as *;
+
+
+.cursor{
+    display: none;
+    position: absolute;
+    @include stylesForCircle($radius:40px,$bg-Clr:map-get($colors,'cursorclr'),$stroke-width:2px,$stroke-clr:map-get($colors,'secondary'));
+    pointer-events: none;
+    z-index:map-get($zIndex,'above');
+    &::before{
+        @include stylesForPseudoElement($content:"",$width:4px,$height:4px,$top:50%,$left:50%);
+        background-color: map-get($colors,'secondary');
+        transform: translate(-50%,-50%);
+    }
+}
+@media (hover: hover) {
+    .cursor{
+        display:initial;
+    }
+}
+      

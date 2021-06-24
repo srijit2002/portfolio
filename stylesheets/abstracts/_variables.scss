@@ -1,0 +1,31 @@
+$colors:(
+  'primary':#000,
+  'secondary':#fafafa,
+  'bgtext':#0a0a0a,
+  'cursorclr':#0000008c,
+  
+);
+
+$font:(
+  'primary':'monument_extendedultrabold',
+  'secondary':'hansonbold',
+  'linktext':'Roboto'
+);
+
+$breakpoints: (
+  'small': 320px,
+  'medium': 768px,
+  'large': 1024px,
+);
+
+$transitionTime: (
+  'slo': 1s,
+  'med': 500ms,
+  'fas': 200ms,
+);
+$zIndex:(
+  'below':-1,
+  'normal':1,
+  'above':2,
+  'top':3
+);

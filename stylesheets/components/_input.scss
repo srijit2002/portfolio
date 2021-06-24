@@ -1,0 +1,16 @@
+@use "../abstracts" as *;
+@use "../base" as *;
+.input{
+    background-color:map-get($colors,'bgtext');
+    font-size:1.3rem;
+    padding:0.5em;
+    outline:1px solid transparent;
+    border:1px solid map-get($colors,'secondary');
+    border-radius: 0.3rem;
+    color:map-get($colors,'secondary');
+    font-family: map-get($font,'linktext');
+    resize: vertical;
+    flex: 1 1 100%;
+}
+    
+    

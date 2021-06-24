@@ -1,0 +1,25 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass mixins.
+// -----------------------------------------------------------------------------
+
+@mixin stylesForPseudoElement($content:"",$width:100%,$height,$top,$left) {
+  content:$content;
+  position: absolute;
+  top:$top;
+  left:$left;
+  width:$width;
+  height:$height;
+}
+
+@mixin stylesForCircle($radius,$bg-Clr,$stroke-width,$stroke-clr){
+  width:$radius;
+  height:$radius;
+  border-radius: 50%;
+  background-color: $bg-Clr;
+  transform:translate(-50%,-50%);
+  border:$stroke-width solid $stroke-clr;
+}
+
+@mixin createTransition($property,$time,$timingFunc){
+ transition: $property $time $timingFunc;
+}
