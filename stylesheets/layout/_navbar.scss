@@ -8,7 +8,7 @@
         overflow: hidden;
         font-size:9vw;
         line-height: 1.1;
-        font-family: map-get($font,'primary');
+        font-family: map-get($font,'primary'),sans-serif;
         color:map-get($colors,'secondary');
         @include createTransition($property:all,$time:map-get($transitionTime,fas),$timingFunc:ease);
         &:hover{

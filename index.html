@@ -12,10 +12,17 @@
     <link rel="preload" as="font" href="/fonts/custom-font.woff2" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" as="font" href="/fonts/custom-font.woff" type="font/woff2" crossorigin="anonymous">
     <link rel="stylesheet" href="./stylesheets/main.css">
-    <title>Srijit</title>
+    <title>Srijitmondal</title>
   </head>
   <body>
     <div class="cursor" id="cursor"></div>
+
+    <div class="preloader" id="preloader">
+      <h1 class="preloader__heading">Loading</h1>
+      <div class="preloader__track">
+        <div class="preloader__thumb"></div>
+      </div>
+    </div>
 
     <header class="header opener">
       <h3 class="header__heading"><span class="hider">Srijit</span></h3>
@@ -24,10 +31,6 @@
         <li><a href="https://github.com/srijit2002"><i class="fab fa-github"></i></a></li>
         <li><a href="https://www.linkedin.com/in/srijit7098/"><i class="fab fa-linkedin"></i></a></li>
      </ul>
-      <div class="hamburger" id="hamburger">
-        <div class="hamburger__line line__one"></div>
-        <div class="hamburger__line line__two"></div>
-      </div>
     </header>
       
 
@@ -133,7 +136,7 @@
 
       <article class="project flex--center animation--left">
         <a class="flex--center" href="https://srijit2002.github.io/travelPlanner.github.io/">
-          <!-- <img src="https://drive.google.com/uc?export=view&id=1fTJygEgHM_fcWrBR7p4BgYLqNqrQW9wG" alt="Travel Planner Website" /> -->
+         
           <img src="./assests/images/travelplanner.jpg" alt="Travel Planner Website" />
         </a>
         <div class="project__details">
@@ -145,7 +148,7 @@
 
       <article class="project flex--center animation--right">
         <a class="flex--center"href="https://srijit2002.github.io/codeEditor/">
-          <!-- <img src="https://drive.google.com/uc?export=view&id=11QoAKDpJ0BxADQv-bOBSVJ8Oc1ddKm6A" alt="" /> -->
+       
           <img src="./assests/images/codepenClone.jpg" alt="Online code editor" />
         </a>
         <div class="project__details">
@@ -156,7 +159,7 @@
 
       <article class="project flex--center animation--left">
         <a class="flex--center" href="https://srijit2002.github.io/taskmanager/">
-          <!-- <img src="https://drive.google.com/uc?export=view&id=1VNWCMCX6vmJIvl-EJS_vmaROVCBZybGw" alt="" /> -->
+
           <img src="./assests/images/taskmanager.jpg" alt="Taskmanager" />
         </a>
         <div class="project__details">
@@ -168,7 +171,7 @@
 
       <article class="project flex--center animation--right">
         <a class="flex--center"href="https://srijit2002.github.io/foodmenu/">
-          <!-- <img src="https://drive.google.com/uc?export=view&id=1at2AkTijy3jufv_XSIfHZqhy8FATE9iq" alt="" /> -->
+
           <img src="./assests/images/Food Ordering Site.jpg" alt="Food Menu" />
         </a>
         <div class="project__details">
@@ -179,7 +182,7 @@
 
       <article class="project flex--center animation--left">
         <a class="flex--center"href="https://srijit2002.github.io/cocktailfinder/">
-          <!-- <img src="https://drive.google.com/uc?export=view&id=1mSeUGmHXptrrBo6HDPTgQpUqyui2EEoh" alt="" /> -->
+
           <img src="./assests/images/CocktailFinder.jpg" alt="Cocktail Receipe Finder" />
         </a>
         <div class="project__details">
@@ -190,7 +193,7 @@
 
       <article class="project flex--center animation--right">
         <a class="flex--center" href="https://srijit2002.github.io/medify.github.io/"></a>
-        <!-- <img src="https://drive.google.com/uc?export=view&id=1AQqtAMiVXvJY9nRIZ487kpNtmiMphjr0" alt="" /> -->
+
         <img src="./assests/images/MeditationApp.jpg" alt="Meditation Webapp" />
         <div class="project__details">
           <h3 class="project__heading">Meditation App</h3>
@@ -201,7 +204,7 @@
 
       <article class="project flex--center animation--left">
         <a class="flex--center" href="https://srijit2002.github.io/Testimonials/">
-          <!-- <img src="https://drive.google.com/uc?export=view&id=1LfjSluk-nrHQWS-T0RgNxAv9VVFUdlmu" alt="" /> -->
+
           <img src="./assests/images/faqpage.jpg" alt="Testimonial site" />
         </a>
         <div class="project__details">
@@ -212,7 +215,7 @@
 
       <article class="project flex--center animation--right">
         <a class="flex--center" href="https://srijit2002.github.io/javascriptcalculator.github.io/">
-          <!-- <img src="https://drive.google.com/uc?export=view&id=12VvvxPD1BHBh8iXpYmRZTzkfmZsZpKNz" alt="" /> -->
+
           <img src="./assests/images/javascriptcalculator.jpg" alt="Javascript Calculator" />
         </a>
         <div class="project__details">
@@ -223,7 +226,7 @@
     </main>
 
     <footer class="footer" id="hire">
-      <h1 class="footer__heading">want a website? Ping me</h1>
+      <h1 class="footer__heading">Need a website? Ping me</h1>
       <div class="footer__data">
 
         <ul class="social__icons__wrapper">
@@ -237,7 +240,7 @@
             <input required="true" class="form__name input" id="name" name="name" type="text" placeholder="Name" />
             <input required="true" class="form__email input" id="email" name="email" type="email" placeholder="Email" />
         </div>
-          <textarea required="true" class="form__des input" name="description" id="desc" cols="30" rows="10" placeholder="Describe about your idea"></textarea>
+          <textarea required="true" class="form__des input" name="description" id="desc" cols="30" rows="10" placeholder="Describe what type of website you want"></textarea>
           <button class="btn" type="submit">Send</button>
         </form>
        </div>

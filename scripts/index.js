@@ -7,6 +7,12 @@ window.addEventListener('mousemove',(e)=>{
     cursor.style.top=e.pageY+'px';
 })
 
+// Animation of preloader
+const preloader=document.getElementById("preloader");
+window.addEventListener("load",()=>{
+  preloader.style.display="none";
+})
+
 // Scrollbar Animation
 
 const scrollbar=document.getElementById("scrollbar__thumb");
@@ -14,19 +20,6 @@ const totalHeight=document.body.scrollHeight-window.innerHeight;
 window.addEventListener('scroll',()=>{
     const progressHeight=(window.pageYOffset/totalHeight)*100;
     scrollbar.style.top=progressHeight+"%";
-})
-
-
-// Hamburger Animation 
-
-const hamburger=document.getElementById("hamburger");
-hamburger.addEventListener("click",()=>{
-    if(hamburger.classList.contains("create__cross")){
-        hamburger.classList.remove("create__cross");
-    }
-    else{
-        hamburger.classList.add("create__cross");
-    }
 })
 
 

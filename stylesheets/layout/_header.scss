@@ -16,7 +16,7 @@
     &__heading{
         overflow: hidden;
         margin: 2.3em 0 0 4em;
-        font-family: map-get($font,'secondary');
+        font-family: map-get($font,'secondary'),sans-serif;
         text-decoration: underline;
     }
 }

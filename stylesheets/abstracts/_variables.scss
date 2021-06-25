@@ -9,13 +9,8 @@ $colors:(
 $font:(
   'primary':'monument_extendedultrabold',
   'secondary':'hansonbold',
-  'linktext':'Roboto'
-);
-
-$breakpoints: (
-  'small': 320px,
-  'medium': 768px,
-  'large': 1024px,
+  'linktext':'Roboto',
+  'preloader':'hansonhairline'
 );
 
 $transitionTime: (
