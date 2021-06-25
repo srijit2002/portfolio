@@ -8,7 +8,7 @@
    
     li{
         color:map-get($colors,'secondary');
-        font-family: map-get($font,linktext);
+        font-family: map-get($font,linktext),sans-serif;
         .fas,.fab{
             font-size: 1.8rem;
             margin-right: 0.5em;

@@ -117,7 +117,7 @@ img {
   align-items: center;
   min-width: 8ch;
   font-size: 1.4rem;
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   padding: 0.1em 0.5em;
   color: #fafafa;
   background-color: #000;
@@ -142,7 +142,7 @@ img {
   border: 1px solid #fafafa;
   border-radius: 0.3rem;
   color: #fafafa;
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   resize: vertical;
   flex: 1 1 100%;
 }
@@ -202,6 +202,38 @@ img {
   height: 4px;
   background-color: #fafafa;
   transform: translate(-50%, -50%);
+}
+
+.pointer {
+  position: absolute;
+  pointer-events: none;
+  z-index: 2;
+  perspective: 170px;
+}
+.pointer__text {
+  position: absolute;
+  text-transform: uppercase;
+  color: #fafafa;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2rem;
+  transform: rotateX(60deg);
+  animation: rotate 5s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotateX(60deg) rotateZ(0deg);
+  }
+  100% {
+    transform: rotateX(60deg) rotateZ(360deg);
+  }
+}
+.letter {
+  position: absolute;
+  top: -70px;
+  display: inline-block;
+  text-transform: uppercase;
+  transform-origin: 0 70px;
 }
 
 @media (hover: hover) {
@@ -264,7 +296,7 @@ img {
 .footer__heading {
   position: relative;
   text-align: center;
-  font-family: "hansonbold";
+  font-family: "hansonbold", sans-serif;
   font-size: 4vw;
 }
 .footer__heading::before {
@@ -522,9 +554,6 @@ img {
   margin: 4em 0;
   flex-direction: column;
 }
-.project:hover img {
-  filter: grayscale(0);
-}
 .project::after {
   pointer-events: none;
   content: "";
@@ -554,12 +583,12 @@ img {
 
 .project__heading {
   font-size: 2rem;
-  font-family: "hansonbold";
+  font-family: "hansonbold", sans-serif;
 }
 
 .project__para {
   font-size: 1.4rem;
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
 }
 
 @media (max-width: 820px) {
@@ -589,7 +618,7 @@ img {
 }
 .social__icons__wrapper li {
   color: #fafafa;
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
 }
 .social__icons__wrapper li .fas, .social__icons__wrapper li .fab {
   font-size: 1.8rem;

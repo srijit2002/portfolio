@@ -7,6 +7,37 @@ window.addEventListener('mousemove',(e)=>{
     cursor.style.top=e.pageY+'px';
 })
 
+// Cursor hover animation
+const projects=document.querySelectorAll(".project");
+
+
+Array.from(projects).forEach((hyperlink)=>{
+  hyperlink.addEventListener("mouseenter",()=>{
+    cursor.classList.replace("cursor","pointer");
+    cursor.innerHTML=`<h1 class="pointer__text">Click-to-see-more-</h1>`;
+   // splitting the letters into spans to make then circular
+
+    const text=document.querySelector(".pointer__text");
+    text.innerHTML=text.textContent.replace(/\S/g,"<span class='letter'>$&</span>");
+    const letters=document.querySelectorAll(".letter");
+    letters.forEach((letter,i)=>{
+      letter.style.transform=`rotate(${i*20}deg)`
+    })
+
+  })
+
+  hyperlink.addEventListener("mouseleave",()=>{
+    cursor.classList.replace("pointer","cursor");
+    cursor.innerHTML=``;
+    
+  })
+
+})
+
+
+
+
+
 // Animation of preloader
 const preloader=document.getElementById("preloader");
 window.addEventListener("load",()=>{

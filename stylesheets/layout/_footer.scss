@@ -12,7 +12,7 @@
     &__heading{
         position: relative;
         text-align: center;
-        font-family: map-get($font,'secondary');
+        font-family: map-get($font,'secondary'),sans-serif;
         font-size:4vw;
         &::before{
             @include stylesForPseudoElement($content:"",$width:20%,$height:0.2rem,$top:100%,$left:30%);
