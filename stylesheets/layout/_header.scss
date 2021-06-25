@@ -55,4 +55,12 @@
     }
     
 }
-        
+@media(max-width:366px){
+    .short__links li {
+        margin:1.3em 0.4em;
+        a .fab,.fas{
+            font-size: 1.2rem;
+        }
+    } 
+}
+ 

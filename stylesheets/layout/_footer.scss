@@ -47,7 +47,11 @@
         margin-right: 0.9em;
         width:100%;
     }
+    &__email{
+        width:100%;
+    }
 }
+        
        
 @media(max-width:820px){
     .form{
@@ -73,6 +77,7 @@
        &__heading{
             font-size:7vw;
             line-height: 1.1;
+            text-align: left;
          }
         &__data{
             display: flex;
@@ -97,4 +102,9 @@
         }
     }
       
+}
+@media(max-width:366px){
+    .footer__heading{
+        font-size:11vw;
+    }
 }

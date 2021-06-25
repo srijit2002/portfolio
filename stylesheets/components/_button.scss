@@ -20,3 +20,9 @@
         color: map-get($colors,'primary');
     }
 }
+
+@media(max-width:366px){
+    .btn{
+        font-size:1.2rem;
+    }
+}
