@@ -15,7 +15,7 @@
     background-color: map-get($colors,'primary');
     border:1px solid map-get($colors,'secondary');
     @include createTransition($property:all,$time:map-get($transitionTime,'fas'),$timingFunc:ease);
-    &:hover{
+    &:hover,&:focus{
         background-color: map-get($colors,'secondary');
         color: map-get($colors,'primary');
     }

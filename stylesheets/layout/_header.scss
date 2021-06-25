@@ -34,3 +34,25 @@
         }
     }
 }
+
+@media (max-width:566px){
+    .header{
+        &__heading{
+            margin: 1.3em 0 0 1.3em;
+        }
+    }
+    .short__links{
+        li{
+           
+            a{
+               
+                .fab,
+                .fas{
+                    font-size: 1.4rem;
+                }
+            }
+        }
+    }
+    
+}
+        
