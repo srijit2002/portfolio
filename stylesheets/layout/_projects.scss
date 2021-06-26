@@ -4,6 +4,7 @@
 .projects{
     display: flex;
     flex-direction: column;
+    
     h1{
         font-size:9vw;
         font-family: map-get($font,'primary');

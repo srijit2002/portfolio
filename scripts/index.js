@@ -11,8 +11,8 @@ window.addEventListener('mousemove',(e)=>{
 const projects=document.querySelectorAll(".project");
 
 
-Array.from(projects).forEach((hyperlink)=>{
-  hyperlink.addEventListener("mouseenter",()=>{
+projects.forEach((project)=>{
+  project.addEventListener("mouseenter",()=>{
     cursor.classList.replace("cursor","pointer");
     cursor.innerHTML=`<h1 class="pointer__text">Click-to-see-more-</h1>`;
    // splitting the letters into spans to make then circular
@@ -26,7 +26,7 @@ Array.from(projects).forEach((hyperlink)=>{
 
   })
 
-  hyperlink.addEventListener("mouseleave",()=>{
+  project.addEventListener("mouseleave",()=>{
     cursor.classList.replace("pointer","cursor");
     cursor.innerHTML=``;
     
@@ -35,13 +35,11 @@ Array.from(projects).forEach((hyperlink)=>{
 })
 
 
-
-
-
 // Animation of preloader
 const preloader=document.getElementById("preloader");
 window.addEventListener("load",()=>{
   preloader.style.display="none";
+  document.querySelector("body").style.overflowY="auto";//So that vertical scrollbar does not appear on preloader
 })
 
 // Scrollbar Animation
@@ -90,13 +88,18 @@ opener.forEach((item) => {
 
   tl.from(item, {
     scaleX:0,
-    duration:1
+    duration:1.7
   })
 });
 // 69-72 animation fof navbar texts
 const hiders=gsap.utils.toArray(".hider");
 hiders.forEach((hider) => {
- gsap.fromTo(hider, {y:'100%',x:0}, {y:'0%',x:0, delay:1,duration: 1,ease:'power1.out'});
+ gsap.fromTo(hider, {y:'100%',x:0}, {y:'0%',x:0, delay:1.7,duration: 1,ease:'power1.out'});
 });
+gsap.from(".intro__para",{
+  opacity:0,
+  delay:1,
+  duration:1.5
+})
 
 

@@ -1,39 +1,54 @@
 @use "../abstracts" as *;
 @use "../base" as *;
-.navbar{
-    height:100vh;
-    padding:6em;
-    margin-top: 1em;
-    h2{
+.navbar {
+  ul {
+    display: flex;
+    margin-left:3em;
+    li{
+       margin: 0 1em;
+       position: relative;
+    a{
+      overflow: hidden;
+      font-family: map-get($font, "linktext"), sans-serif;
+      color: map-get($colors, "secondary");
+    &::before{
+        @include stylesForPseudoElement($content:"",$width:100%,$height:0.1rem,$top:100%,$left:0);
+        background-color:currentColor;
+        transition: all 500ms;
+        transform-origin:left;
+        transform: scaleX(0);
+    }
+    &:hover::before{
+      transform: scaleX(1);
+    }
+    @include createTransition(
+        $property: all,
+        $time: map-get($transitionTime, fas),
+        $timingFunc: ease
+    );
+     h3{
+        font-size: 1.1rem;
         overflow: hidden;
-        font-size:9vw;
-        line-height: 1.1;
-        font-family: map-get($font,'primary'),sans-serif;
-        color:map-get($colors,'secondary');
-        @include createTransition($property:all,$time:map-get($transitionTime,fas),$timingFunc:ease);
-        &:hover{
-            color:scale-color($color:#000,$lightness: 95%);
-            @supports(-webkit-text-stroke:2px map-get($colors,'secondary')){
-                color:transparent;
-                -webkit-text-stroke:2px map-get($colors,'secondary');
-            }
-        }
+     }
     }
+  }
 }
-@media (max-width:566px){
- .navbar{
-      padding:3em;
-    }
+    
+}
 
-    h2 span{
-        font-size:11vw;
-        line-height: 1.3;
-    }
-}
-        
-@media (max-width:406px){
-    h2 span{
-        font-size:10vw;
-    }
-}
-        
+// @media (max-width:566px){
+//  .navbar{
+//       padding:3em;
+//     }
+
+//     h2 span{
+//         font-size:11vw;
+//         line-height: 1.3;
+//     }
+// }
+
+// @media (max-width:406px){
+//     h2 span{
+//         font-size:10vw;
+//     }
+// }

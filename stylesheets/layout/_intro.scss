@@ -1,0 +1,33 @@
+@use "../abstracts" as *;
+@use "../base" as *;
+
+.intro{
+  height:100vh;
+  display:flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items:flex-start;
+  padding:7em;
+  &__heading{
+    text-align: left;
+    font-size:10vw;
+    font-family: map-get($font,'secondary');
+    line-height: 1.25;
+    overflow: hidden;
+    &:hover{
+      color:transparent;
+      -webkit-text-stroke: 1px map-get($colors,'secondary');
+    }
+    
+  }
+  &__para{
+    font-size: 1.2rem;
+    max-width:35vw;
+    font-family: map-get($font,'linktext');
+    margin-left:30vw;
+    margin-bottom:-3em;
+    span{
+      font-weight: bold;
+    }
+  }
+}
