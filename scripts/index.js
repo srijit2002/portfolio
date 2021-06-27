@@ -35,7 +35,7 @@ projects.forEach((project)=>{
 })
 
 
-// Enlarging the element at center
+// Enlarging the heading quate at center on opening
 const enlargeCenter=()=>{
   document.querySelector(".center").style.transform="scale(500)";
   document.querySelector(".center").addEventListener("webkitTransitionEnd",()=>{
@@ -75,7 +75,7 @@ const preloader=document.getElementById("preloader");
 window.addEventListener("load",()=>{
   preloader.innerHTML=``;
   for(var i=0;i<11;i++){
-    if(i==6){
+    if(i==5){
       preloader.innerHTML+=`<h1 class="center">Be Yourself, Everyone else is taken</h1>`;
     }
     else{
@@ -88,8 +88,9 @@ preloaderTimeline.from(preloaderTexts, {
   duration:0.4,
   stagger:{
     each:0.3,
-    from:"edges"
-  }
+    from:"edges",
+  },
+  onComplete:()=>{document.querySelector(".center").style.opacity=1;}
   
 })
 .to(preloaderTexts, {
@@ -97,14 +98,7 @@ preloaderTimeline.from(preloaderTexts, {
   duration:1,
   onComplete:enlargeCenter
 });
-
-
-
 })
-
-
-
-
 
 
 
@@ -145,5 +139,29 @@ containers.forEach((container) => {
   );
 });
 
+// Animation at project section
+// clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%)
+projects.forEach((project)=>{
+  gsap.to(project, {
+    scrollTrigger:project,
+    webkitClipPath: 'polygon(0 0, 100% 0%, 100% 100%, 0 100%)',
+    clipPath: 'polygon(0 0, 100% 0%, 100% 100%, 0 100%)',
+    duration:1
+  });
+  
+})
 
 
+// const hamburger=document.querySelector(".hamburger");
+// const navbar=document.querySelector(".navbar");
+
+// hamburger.addEventListener("click",()=>{
+//   console.log("hello")
+//   if(navbar.style.transform==`scaleX(0)`){
+//     navbar.style.transform=`scaleX(1)`;
+//   }
+//   else{
+//     navbar.style.transform=`scaleX(0)`;
+//   }
+  
+// })

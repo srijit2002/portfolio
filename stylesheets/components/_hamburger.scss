@@ -1,0 +1,36 @@
+@use "../abstracts" as *;
+@use "../base" as *;
+
+.hamburger{
+    padding:0.3em;
+    margin-left:2em;
+    z-index:2;
+    display: none;
+    flex-direction: column;
+    &__line{
+        width:2.5rem;
+        height:0.2rem;
+        background-color: map-get($colors,'secondary');
+        margin: 0.4em 0;
+        border-radius: 0.3em;
+    }
+}
+
+@media(max-width:366px){
+    .hamburger{
+      margin-left:1em;
+    }
+}
+
+  
+  @media(max-width:300px){
+    .hamburger{
+        margin-left:0;
+      }
+  }
+
+  @media(max-width:750px){
+    .hamburger{
+      display: flex;
+    }
+   }

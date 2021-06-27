@@ -43,7 +43,8 @@
 
 .center{
    @extend .preloader__text;
-   @include createTransition($property:transform,$time:1.3s,$timingFunc:ease-in);
+   @include createTransition($property:all,$time:1.9s,$timingFunc:ease-in);
+   opacity:0;
 }
 
 @keyframes preloader{
