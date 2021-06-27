@@ -151,6 +151,23 @@ projects.forEach((project)=>{
   
 })
 
+//************************/ skew effect in precontact section/**********************************************//
+var currentPosition=window.pageYOffset;
+
+const about=document.getElementById("about");
+function skewEffect(){
+  var newPosition=window.pageYOffset;
+  var diff=newPosition-currentPosition;
+  var skew=diff*0.3;
+  about.style.transform=`skewY(${skew}deg)`;
+  currentPosition=newPosition;
+  requestAnimationFrame(skewEffect);
+}
+skewEffect();
+
+
+
+
 
 // const hamburger=document.querySelector(".hamburger");
 // const navbar=document.querySelector(".navbar");

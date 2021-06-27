@@ -537,9 +537,10 @@ img {
   overflow: hidden;
 }
 
-@media (max-width: 566px) {
-  .navbar {
-    padding: 3em;
+@media (max-width: 750px) {
+  .navbar li a h3 span {
+    font-size: 1.1rem;
+    font-family: "Roboto", sans-serif;
   }
 }
 @media (max-width: 406px) {
@@ -547,19 +548,17 @@ img {
     font-size: 10vw;
   }
 }
-@media (max-width: 750px) {
-  .navbar li a h3 span {
-    font-size: 1.1rem;
-    font-family: "Roboto", sans-serif;
-  }
-}
-@media (max-width: 575px) {
+@media (max-width: 378px) {
   .navbar {
-    padding: 1em;
+    width: 100%;
+    padding: 1em 0;
   }
   .navbar ul {
-    margin-left: 1em;
-    justify-content: space-between;
+    margin-left: 0;
+    justify-content: space-around;
+  }
+  .navbar ul li a h3 span {
+    font-size: 0.9rem;
   }
 }
 .intro {
@@ -584,6 +583,7 @@ img {
   -webkit-text-stroke: 1px #fafafa;
 }
 .intro__para {
+  align-self: center;
   font-size: 1.2rem;
   max-width: 50ch;
   font-family: "Roboto", sans-serif;
@@ -777,6 +777,8 @@ img {
   font-size: 8vw;
   word-wrap: break-word;
   hyphens: auto;
+  transition: transform 100ms;
+  transform-origin: center;
 }
 
 /*# sourceMappingURL=main.css.map */

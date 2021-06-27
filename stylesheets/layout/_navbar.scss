@@ -36,18 +36,6 @@
     
 }
 
-@media (max-width:566px){
- .navbar{
-      padding:3em;
-    }
-
-}
-
-@media (max-width:406px){
-    h2 span{
-        font-size:10vw;
-    }
-}
 
 @media(max-width:750px){
  .navbar{
@@ -59,13 +47,24 @@
 
   }
 }
-@media(max-width:575px){
- .navbar{
- padding: 1em;
-  ul{
-    margin-left: 1em;
-    justify-content: space-between;
-  } 
 
+@media (max-width:406px){
+  h2 span{
+      font-size:10vw;
+  }
+}
+
+@media(max-width:378px){
+ .navbar{
+   width:100%;
+   padding:1em 0;
+  ul{
+    margin-left: 0;
+    justify-content:space-around;
+ 
+  li a h3 span{
+    font-size: 0.9rem;
+  }
+} 
   }
 }
