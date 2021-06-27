@@ -9,7 +9,7 @@
        position: relative;
     a{
       overflow: hidden;
-      font-family: map-get($font, "linktext"), sans-serif;
+      font-family: map-get($font, "primary--rg"), sans-serif;
       color: map-get($colors, "secondary");
     &::before{
         @include stylesForPseudoElement($content:"",$width:100%,$height:0.1rem,$top:100%,$left:0);

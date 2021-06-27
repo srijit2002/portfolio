@@ -2,7 +2,7 @@
 // This file contains very basic styles.
 // -----------------------------------------------------------------------------
 @use "../abstracts" as *;
-// @use "../base";
+
 
 
 /**
@@ -23,10 +23,10 @@
 
 
 // hiding the default scrollbar
-// ::-webkit-scrollbar{
-//   width:0;
+::-webkit-scrollbar{
+  width:0;
   
-// }
+}
 
 
 /**

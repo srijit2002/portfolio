@@ -22,30 +22,28 @@
     
 &__text{
     position: absolute;
-    text-transform: uppercase;
     color:map-get($colors,'secondary');
-    font-family:map-get($font,'linktext'),sans-serif;
-    font-size: 1rem;
-    transform: rotateX(60deg);
+    font-family:map-get($font,'primary--rg'),sans-serif;
+    font-size: 0.7rem;
     animation: rotate 5s linear infinite;
     }
 }
 @keyframes rotate{
     0%{
-        transform:rotateX(60deg) rotateZ(0deg);
+        transform:rotateX(60deg) rotateY(-20deg) rotateZ(0deg);
     }
     100%{
-        transform:rotateX(60deg) rotateZ(360deg);
+        transform:rotateX(60deg) rotateY(-20deg) rotateZ(360deg);
     }
 }
 
 
 .letter{
     position: absolute;
-    top:-55px;
+    top:-50px;
     display: inline-block;
     text-transform: uppercase;
-    transform-origin: 0 55px;
+    transform-origin: 0 50px;
 }
 
 

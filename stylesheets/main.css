@@ -14,6 +14,10 @@
   cursor: none !important;
 }
 
+::-webkit-scrollbar {
+  width: 0;
+}
+
 /**
  * Basic styles for lists
  */
@@ -79,6 +83,12 @@ img {
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: "monument_extendedregular";
+  src: url("..//..//assests/fonts/monumentextended-regular-webfont.woff2") format("woff2"), url("..//..//assests/fonts/monumentextended-ultrabold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 .flex--center {
   display: flex;
   justify-content: center;
@@ -109,6 +119,13 @@ img {
 
 .hider {
   display: block;
+}
+
+.order--reverse a {
+  order: 2;
+}
+.order--reverse .project__details {
+  order: 1;
 }
 
 .btn {
@@ -212,28 +229,26 @@ img {
 }
 .pointer__text {
   position: absolute;
-  text-transform: uppercase;
   color: #fafafa;
-  font-family: "Roboto", sans-serif;
-  font-size: 1rem;
-  transform: rotateX(60deg);
+  font-family: "monument_extendedregular", sans-serif;
+  font-size: 0.7rem;
   animation: rotate 5s linear infinite;
 }
 
 @keyframes rotate {
   0% {
-    transform: rotateX(60deg) rotateZ(0deg);
+    transform: rotateX(60deg) rotateY(-20deg) rotateZ(0deg);
   }
   100% {
-    transform: rotateX(60deg) rotateZ(360deg);
+    transform: rotateX(60deg) rotateY(-20deg) rotateZ(360deg);
   }
 }
 .letter {
   position: absolute;
-  top: -55px;
+  top: -50px;
   display: inline-block;
   text-transform: uppercase;
-  transform-origin: 0 55px;
+  transform-origin: 0 50px;
 }
 
 @media (hover: hover) {
@@ -249,10 +264,8 @@ img {
   height: 100%;
   background-color: #000;
   z-index: 4;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  place-items: center;
 }
 .preloader__heading {
   color: #fafafa;
@@ -276,6 +289,15 @@ img {
   transform-origin: left;
   background-color: #fafafa;
   animation: preloader 4s linear infinite;
+}
+.preloader__text, .center {
+  font-family: "monument_extendedregular";
+  font-size: 3.7vw;
+  line-height: 1.2;
+}
+
+.center {
+  transition: transform 1.3s ease-in;
 }
 
 @keyframes preloader {
@@ -450,7 +472,7 @@ img {
 }
 .navbar ul li a {
   overflow: hidden;
-  font-family: "Roboto", sans-serif;
+  font-family: "monument_extendedregular", sans-serif;
   color: #fafafa;
   transition: all 200ms ease;
 }
@@ -516,8 +538,9 @@ img {
 
 .project {
   position: relative;
-  margin: 4em 0;
-  flex-direction: column;
+  margin: 2em 0;
+  padding: 1em 5em;
+  align-items: center;
 }
 .project::after {
   pointer-events: none;
@@ -527,11 +550,14 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(to top, #000 10%, transparent);
+  background-image: linear-gradient(to top, #000, transparent);
 }
-.project img {
-  width: 75%;
-  max-width: 80%;
+.project a {
+  flex-grow: 3;
+  max-width: 80vw;
+}
+.project__img {
+  width: 100%;
   filter: grayscale(100%);
   transition: all 500ms linear;
 }
@@ -542,7 +568,8 @@ img {
   justify-content: flex-start;
   text-align: left;
   align-content: flex-start;
-  padding: 1em 7em;
+  padding: 0 1em;
+  flex-grow: 2;
   z-index: 2;
 }
 

@@ -9,10 +9,8 @@
     height:100%;
     background-color: map-get($colors,'primary');
     z-index: 4;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    display:grid;
+    place-items: center;
     &__heading{
         color:map-get($colors,'secondary');
         font-size:8vw;
@@ -36,6 +34,16 @@
         background-color: map-get($colors,'secondary');
         animation:preloader 4s linear infinite;
     }
+    &__text{
+        font-family: map-get($font,'primary--rg');
+        font-size:3.7vw;
+        line-height:1.2;
+    }
+}
+
+.center{
+   @extend .preloader__text;
+   @include createTransition($property:transform,$time:1.3s,$timingFunc:ease-in);
 }
 
 @keyframes preloader{
