@@ -15,7 +15,8 @@ projects.forEach((project)=>{
   project.addEventListener("mouseenter",()=>{
     cursor.classList.replace("cursor","pointer");
     cursor.innerHTML=`<h1 class="pointer__text">Click-to-see-more-</h1>`;
-   // splitting the letters into spans to make then circular
+
+   // splitting the letters into spans to make then circular curser which will appear on image
 
     const text=document.querySelector(".pointer__text");
     text.innerHTML=text.textContent.replace(/\S/g,"<span class='letter'>$&</span>");
@@ -35,15 +36,16 @@ projects.forEach((project)=>{
 })
 
 
-// Enlarging the heading quate at center on opening
+// Enlarging the heading quate at center on opening*****************************************
 const enlargeCenter=()=>{
-  document.querySelector(".center").style.transform="scale(500)";
-  document.querySelector(".center").addEventListener("webkitTransitionEnd",()=>{
+  const center=document.querySelector(".center");
+  center.style.transform="scale(500)";
+  center.addEventListener("webkitTransitionEnd",()=>{
     preloader.style.display="none";
     document.querySelector("body").style.overflowY="auto";//So that vertical scrollbar does not appear on preloader
 // Animation on opening
 
-// 58-57 animation of navbar
+// scalex animation of navbar****************************************************************
 const opener= gsap.utils.toArray(".opener");
 opener.forEach((item) => {
   const tl = gsap.timeline();
@@ -53,7 +55,7 @@ opener.forEach((item) => {
     duration:1.7
   })
 });
-// 69-72 animation of navbar texts
+// text reveal animation of navbar links*****************************************************
 const hiders=gsap.utils.toArray(".hider");
 hiders.forEach((hider) => {
  gsap.fromTo(hider, {y:'100%',x:0}, {y:'0%',x:0, delay:1.7,duration: 1,ease:'power1.out'});
@@ -68,7 +70,7 @@ gsap.from(".intro__para",{
 }
 
 
-/*****Animation on preloader section******/
+//*****Animation at opener quate section*************************************************
 
 const preloaderTimeline=gsap.timeline();
 const preloader=document.getElementById("preloader");
@@ -102,7 +104,7 @@ preloaderTimeline.from(preloaderTexts, {
 
 
 
-// Scrollbar Animation
+// Scrollbar Animation********************************************************
 
 const scrollbar=document.getElementById("scrollbar__thumb");
 const totalHeight=document.body.scrollHeight-window.innerHeight;
@@ -111,54 +113,26 @@ window.addEventListener('scroll',()=>{
     scrollbar.style.top=progressHeight+"%";
 })
 
+// Animation at project section************************************************
 
-
-
-// Animation at about section
-const containers = gsap.utils.toArray(".container");
-containers.forEach((container) => {
-  const tl = gsap.timeline({
-    scrollTrigger: {
-      start:'top top',
-      trigger: container,
-      pin: true,
-      pinSpacing: false,
-      scrub: true,
-      
-    }
-  });
-
-  tl.to(container, {
-    autoAlpha: 1
-  }).to(
-    container,
-    {
-      autoAlpha: 0
-    },
-    0.5
-  );
-});
-
-// Animation at project section
-// clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%)
 projects.forEach((project)=>{
   gsap.to(project, {
     scrollTrigger:project,
     webkitClipPath: 'polygon(0 0, 100% 0%, 100% 100%, 0 100%)',
     clipPath: 'polygon(0 0, 100% 0%, 100% 100%, 0 100%)',
-    duration:1
+    duration:0.5
   });
   
 })
 
-//************************/ skew effect in precontact section/**********************************************//
+//**********************/ skew effect in precontact section/*********************
 var currentPosition=window.pageYOffset;
 
 const about=document.getElementById("about");
 function skewEffect(){
   var newPosition=window.pageYOffset;
   var diff=newPosition-currentPosition;
-  var skew=diff*0.3;
+  var skew=diff*0.2;
   about.style.transform=`skewY(${skew}deg)`;
   currentPosition=newPosition;
   requestAnimationFrame(skewEffect);
