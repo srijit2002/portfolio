@@ -1,3 +1,5 @@
+
+
 // Cursor Animation
 
 const cursor=document.getElementById("cursor");
@@ -127,17 +129,41 @@ projects.forEach((project)=>{
 
 //**********************/ skew effect in precontact section/*********************
 var currentPosition=window.pageYOffset;
+const maxDiff=20;
 
 const about=document.getElementById("about");
 function skewEffect(){
   var newPosition=window.pageYOffset;
   var diff=newPosition-currentPosition;
-  var skew=diff*0.2;
-  about.style.transform=`skewY(${skew}deg)`;
+  if(diff>0){
+    diff=Math.min(diff,maxDiff);
+  }
+  else{
+    diff=Math.max(diff,-maxDiff);
+  }
+  var skew=diff*0.4;
+  var rotate=diff*0.2;
+
+  about.style.transform=`skewY(${skew}deg) rotateY(${rotate}deg)`;
   currentPosition=newPosition;
   requestAnimationFrame(skewEffect);
 }
 skewEffect();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
