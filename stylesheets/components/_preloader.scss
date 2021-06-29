@@ -2,7 +2,7 @@
 @use "../base" as *;
 
 .preloader{
-    position: absolute;
+    position:fixed;
     top:0;
     left:0;
     width:100%;
@@ -11,6 +11,7 @@
     z-index: 4;
     display:grid;
     place-items: center;
+    transition: display 300ms;
     &__heading{
         color:map-get($colors,'secondary');
         font-size:8vw;

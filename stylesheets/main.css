@@ -40,8 +40,8 @@ body {
   text-rendering: optimizeSpeed;
   line-height: 1.5;
   color: #fafafa;
-  overflow: hidden;
   background-color: #000;
+  overflow-x: hidden;
 }
 
 img {
@@ -250,7 +250,7 @@ img {
   }
 }
 .preloader {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -259,6 +259,7 @@ img {
   z-index: 4;
   display: grid;
   place-items: center;
+  transition: display 300ms;
 }
 .preloader__heading {
   color: #fafafa;
@@ -777,8 +778,6 @@ img {
   font-size: 8vw;
   word-wrap: break-word;
   hyphens: auto;
-  transition: transform 100ms;
-  transform-origin: center;
 }
 
 /*# sourceMappingURL=main.css.map */

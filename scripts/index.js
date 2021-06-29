@@ -44,7 +44,7 @@ const enlargeCenter=()=>{
   center.style.transform="scale(500)";
   center.addEventListener("webkitTransitionEnd",()=>{
     preloader.style.display="none";
-    document.querySelector("body").style.overflowY="auto";//So that vertical scrollbar does not appear on preloader
+   
 // Animation on opening
 
 // scalex animation of navbar****************************************************************
@@ -54,17 +54,17 @@ opener.forEach((item) => {
 
   tl.from(item, {
     scaleX:0,
-    duration:1.7
+    duration:1.6
   })
 });
 // text reveal animation of navbar links*****************************************************
 const hiders=gsap.utils.toArray(".hider");
 hiders.forEach((hider) => {
- gsap.fromTo(hider, {y:'100%',x:0}, {y:'0%',x:0, delay:1.7,duration: 1,ease:'power1.out'});
+ gsap.fromTo(hider, {y:'100%',x:0}, {y:'0%',x:0, delay:1.5,duration: 1,ease:'power1.out'});
 });
 gsap.from(".intro__para",{
   opacity:0,
-  delay:1,
+  delay:0.8,
   duration:1.5
 })
  })
@@ -80,10 +80,10 @@ window.addEventListener("load",()=>{
   preloader.innerHTML=``;
   for(var i=0;i<11;i++){
     if(i==5){
-      preloader.innerHTML+=`<h1 class="center">Be Yourself, Everyone else is taken</h1>`;
+      preloader.innerHTML+=`<h1 class="center">good artists copy great artists steal</h1>`;
     }
     else{
-      preloader.innerHTML+=`<h1 class="preloader__text">Be Yourself, Everyone else is taken</h1>`;
+      preloader.innerHTML+=`<h1 class="preloader__text">good artists copy great artists steal</h1>`;
     }
   }
 const preloaderTexts=document.querySelectorAll(".preloader__text");

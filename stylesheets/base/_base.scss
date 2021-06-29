@@ -52,8 +52,8 @@
    text-rendering: optimizeSpeed;
    line-height:1.5;
    color: map-get($colors,'secondary');
-   overflow: hidden; //so the cursor does not cause the body to overflow and vertical scrollbar does not appear on preloader
    background-color: map-get($colors,'primary');
+   overflow-x: hidden;
   }
 
 // Setting defaults for images
