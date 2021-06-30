@@ -150,35 +150,3 @@ function skewEffect(){
 }
 skewEffect();
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// const hamburger=document.querySelector(".hamburger");
-// const navbar=document.querySelector(".navbar");
-
-// hamburger.addEventListener("click",()=>{
-//   console.log("hello")
-//   if(navbar.style.transform==`scaleX(0)`){
-//     navbar.style.transform=`scaleX(1)`;
-//   }
-//   else{
-//     navbar.style.transform=`scaleX(0)`;
-//   }
-  
-// })

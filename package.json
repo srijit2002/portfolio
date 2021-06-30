@@ -11,8 +11,5 @@
   "license": "ISC",
   "devDependencies": {
     "sass": "^1.35.1"
-  },
-  "dependencies": {
-    "smooth-scrollbar": "^8.6.2"
   }
 }

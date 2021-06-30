@@ -293,6 +293,7 @@ img {
 .center {
   transition: all 1.9s ease-in;
   opacity: 0;
+  transform-origin: 52% 50%;
 }
 
 @keyframes preloader {

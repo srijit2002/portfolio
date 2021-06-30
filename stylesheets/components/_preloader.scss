@@ -46,6 +46,7 @@
    @extend .preloader__text;
    @include createTransition($property:all,$time:1.9s,$timingFunc:ease-in);
    opacity:0;
+   transform-origin: 52% 50%;
 }
 
 @keyframes preloader{
