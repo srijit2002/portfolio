@@ -10,18 +10,17 @@
   padding:7em;
   &__title{
     line-height: 1.23;
+   
 }
   &__heading{
     text-align: left;
     font-size:8vw;
     font-family: map-get($font,'secondary');
     overflow: hidden;
-    
-    &:hover{
+    &:first-child{
       color:transparent;
       -webkit-text-stroke: 1px map-get($colors,'secondary');
     }
-    
   }
   &__para{
     align-self: center;

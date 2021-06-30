@@ -580,7 +580,7 @@ img {
   font-family: "hansonbold";
   overflow: hidden;
 }
-.intro__heading:hover {
+.intro__heading:first-child {
   color: transparent;
   -webkit-text-stroke: 1px #fafafa;
 }
