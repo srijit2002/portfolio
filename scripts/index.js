@@ -127,12 +127,10 @@ projects.forEach((project)=>{
   
 })
 
-document.querySelectorAll(".project__details").forEach((para,index)=>{
-  var translatePosition;
-  (index%2==0)?translatePosition="30px":translatePosition="-30px";
-  gsap.to(para,{
+document.querySelectorAll(".project__details").forEach((para)=>{
+ gsap.to(para,{
     scrollTrigger:para,
-    x:translatePosition,
+    x:0,
     duration:1,
     ease:"power1.out"
   })

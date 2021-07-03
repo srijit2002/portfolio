@@ -686,6 +686,12 @@ img {
   flex-grow: 2;
   z-index: 2;
 }
+.project__details:nth-child(even) {
+  transform: translateX(30px);
+}
+.project__details:nth-child(odd) {
+  transform: translateX(-30px);
+}
 
 .project__heading {
   font-size: 2rem;
