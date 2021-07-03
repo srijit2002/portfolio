@@ -120,33 +120,21 @@ window.addEventListener('scroll',()=>{
 projects.forEach((project)=>{
   gsap.to(project, {
     scrollTrigger:project,
-    webkitClipPath: 'polygon(0 0, 100% 0%, 100% 100%, 0 100%)',
-    clipPath: 'polygon(0 0, 100% 0%, 100% 100%, 0 100%)',
+    y:0,
+    opacity: 1,
     duration:0.5
   });
   
 })
 
-//**********************/ skew effect in precontact section/*********************
-var currentPosition=window.pageYOffset;
-const maxDiff=20;
-
-const about=document.getElementById("about");
-function skewEffect(){
-  var newPosition=window.pageYOffset;
-  var diff=newPosition-currentPosition;
-  if(diff>0){
-    diff=Math.min(diff,maxDiff);
-  }
-  else{
-    diff=Math.max(diff,-maxDiff);
-  }
-  var skew=diff*0.4;
-  var rotate=diff*0.2;
-
-  about.style.transform=`skewY(${skew}deg) rotateY(${rotate}deg)`;
-  currentPosition=newPosition;
-  requestAnimationFrame(skewEffect);
-}
-skewEffect();
+document.querySelectorAll(".project__details").forEach((para,index)=>{
+  var translatePosition;
+  (index%2==0)?translatePosition="30px":translatePosition="-30px";
+  gsap.to(para,{
+    scrollTrigger:para,
+    x:translatePosition,
+    duration:1,
+    ease:"power1.out"
+  })
+})
 
