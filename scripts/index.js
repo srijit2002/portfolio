@@ -89,9 +89,9 @@ window.addEventListener("load",()=>{
 const preloaderTexts=document.querySelectorAll(".preloader__text");
 preloaderTimeline.from(preloaderTexts, {
   opacity:0,
-  duration:0.4,
+  duration:0.3,
   stagger:{
-    each:0.3,
+    each:0.25,
     from:"edges",
   },
   onComplete:()=>{document.querySelector(".center").style.opacity=1;}

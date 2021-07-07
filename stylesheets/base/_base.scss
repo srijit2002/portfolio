@@ -54,6 +54,7 @@
    color: map-get($colors,'secondary');
    background-color: map-get($colors,'primary');
    overflow-x: hidden;
+   scrollbar-width:none;
   }
 
 // Setting defaults for images
