@@ -41,7 +41,7 @@ projects.forEach((project)=>{
 // Enlarging the heading quate at center on opening*****************************************
 const enlargeCenter=()=>{
   const center=document.querySelector(".center");
-  center.style.transform="scale(500)";
+  center.style.transform="scale(600)";
   center.addEventListener("webkitTransitionEnd",()=>{
     preloader.style.display="none";
    

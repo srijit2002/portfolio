@@ -284,11 +284,11 @@ img {
   position: absolute;
   top: 0;
   left: 0;
-  width: 4vw;
+  width: 5vw;
   height: 108%;
   transform-origin: left;
   background-color: #fafafa;
-  animation: preloader 4s linear infinite;
+  animation: preloader 2s linear infinite;
 }
 .preloader__text, .center {
   font-family: "monument_extendedregular";
@@ -300,7 +300,7 @@ img {
 .center {
   transition: all 1.9s ease-in;
   opacity: 0;
-  transform-origin: 62% 37%;
+  transform-origin: 61.3% 34.7%;
 }
 
 @keyframes preloader {

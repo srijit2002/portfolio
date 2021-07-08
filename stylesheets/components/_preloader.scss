@@ -29,11 +29,11 @@
         position: absolute;
         top:0;
         left:0;
-        width:4vw;
+        width:5vw;
         height:108%;
         transform-origin: left;
         background-color: map-get($colors,'secondary');
-        animation:preloader 4s linear infinite;
+        animation:preloader 2s linear infinite;
     }
     &__text{
         font-family: map-get($font,'primary--rg');
@@ -47,7 +47,7 @@
    @extend .preloader__text;
    @include createTransition($property:all,$time:1.9s,$timingFunc:ease-in);
    opacity:0;
-   transform-origin: 62% 37%;
+   transform-origin: 61.3% 34.7%;
 }
 
 @keyframes preloader{
