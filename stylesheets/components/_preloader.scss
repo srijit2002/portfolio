@@ -7,14 +7,14 @@
     left:0;
     width:100%;
     height:100%;
-    background-color: map-get($colors,'primary');
+    background-color: map-get($colors,'secondary');
     z-index: 4;
     display:grid;
     place-items: center;
     transition: display 300ms;
     &__heading{
-        color:map-get($colors,'secondary');
-        font-size:8vw;
+        color:map-get($colors,'primary');
+        font-size:6vw;
         font-family: map-get($font,'preloader'),sans-serif;
         text-transform: uppercase;
     }
@@ -29,7 +29,7 @@
         position: absolute;
         top:0;
         left:0;
-        width:100%;
+        width:4vw;
         height:108%;
         transform-origin: left;
         background-color: map-get($colors,'secondary');
@@ -37,8 +37,9 @@
     }
     &__text{
         font-family: map-get($font,'primary--rg');
-        font-size:3.5vw;
+        font-size:3.7vw;
         line-height:1.2;
+        color:map-get($colors,'primary');
     }
 }
 
@@ -46,16 +47,15 @@
    @extend .preloader__text;
    @include createTransition($property:all,$time:1.9s,$timingFunc:ease-in);
    opacity:0;
-   transform-origin: 52% 50%;
+   transform-origin: 62% 37%;
 }
 
 @keyframes preloader{
     0%{
-        transform: scaleX(0);
-        transform-origin: left;
+        left:0;
+        
     }
     100%{
-        transform: scaleX(100%);
-        transform-origin:right;
+        left:100%;
     }
 }

@@ -206,6 +206,7 @@ img {
   transform: translate(-50%, -50%);
   border: 2px solid #fafafa;
   pointer-events: none;
+  mix-blend-mode: difference;
   z-index: 3;
 }
 .cursor::before {
@@ -260,15 +261,15 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #000;
+  background-color: #fafafa;
   z-index: 4;
   display: grid;
   place-items: center;
   transition: display 300ms;
 }
 .preloader__heading {
-  color: #fafafa;
-  font-size: 8vw;
+  color: #000;
+  font-size: 6vw;
   font-family: "hansonhairline", sans-serif;
   text-transform: uppercase;
 }
@@ -283,7 +284,7 @@ img {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 4vw;
   height: 108%;
   transform-origin: left;
   background-color: #fafafa;
@@ -291,24 +292,23 @@ img {
 }
 .preloader__text, .center {
   font-family: "monument_extendedregular";
-  font-size: 3.5vw;
+  font-size: 3.7vw;
   line-height: 1.2;
+  color: #000;
 }
 
 .center {
   transition: all 1.9s ease-in;
   opacity: 0;
-  transform-origin: 52% 50%;
+  transform-origin: 62% 37%;
 }
 
 @keyframes preloader {
   0% {
-    transform: scaleX(0);
-    transform-origin: left;
+    left: 0;
   }
   100% {
-    transform: scaleX(100%);
-    transform-origin: right;
+    left: 100%;
   }
 }
 .hamburger {

@@ -47,7 +47,7 @@ const enlargeCenter=()=>{
    
 // Animation on opening
 
-// scalex animation of navbar****************************************************************
+// underline animation of navbar****************************************************************
 const opener= gsap.utils.toArray(".opener");
 opener.forEach((item) => {
   const tl = gsap.timeline();
@@ -80,10 +80,10 @@ window.addEventListener("load",()=>{
   preloader.innerHTML=``;
   for(var i=0;i<11;i++){
     if(i==5){
-      preloader.innerHTML+=`<h1 class="center">good artists copy great artists steal</h1>`;
+      preloader.innerHTML+=`<h1 class="center">you need a blazing fast website</h1>`;
     }
     else{
-      preloader.innerHTML+=`<h1 class="preloader__text">good artists copy great artists steal</h1>`;
+      preloader.innerHTML+=`<h1 class="preloader__text">you don't need a website</h1>`;
     }
   }
 const preloaderTexts=document.querySelectorAll(".preloader__text");
@@ -91,7 +91,7 @@ preloaderTimeline.from(preloaderTexts, {
   opacity:0,
   duration:0.3,
   stagger:{
-    each:0.25,
+    each:0.28,
     from:"edges",
   },
   onComplete:()=>{document.querySelector(".center").style.opacity=1;}
@@ -108,9 +108,10 @@ preloaderTimeline.from(preloaderTexts, {
 
 // Scrollbar Animation********************************************************
 
+
 const scrollbar=document.getElementById("scrollbar__thumb");
-const totalHeight=document.body.scrollHeight-window.innerHeight;
 window.addEventListener('scroll',()=>{
+    const totalHeight=document.body.scrollHeight-window.innerHeight;
     const progressHeight=(window.pageYOffset/totalHeight)*100;
     scrollbar.style.top=progressHeight+"%";
 })

@@ -7,6 +7,7 @@
     position: absolute;
     @include stylesForCircle($radius:40px,$bg-Clr:map-get($colors,'cursorclr'),$stroke-width:2px,$stroke-clr:map-get($colors,'secondary'));
     pointer-events: none;
+    mix-blend-mode: difference;
     z-index:3;
     &::before{
         @include stylesForPseudoElement($content:"",$width:4px,$height:4px,$top:50%,$left:50%);
