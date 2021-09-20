@@ -143,7 +143,7 @@ const handleSubmit=async()=>{
   const email=document.getElementById("email").value;
   const body=document.getElementById("body").value;
   try {
-    const response=await axios.post("http://localhost:8000/portfolio/contact/submit",{name,email,body});
+    const response=await axios.post("https://portfolio-site-contact-form.herokuapp.com/portfolio/contact/submit",{name,email,body});
     document.getElementById("name").value="";
     document.getElementById("email").value="";
     document.getElementById("body").value="";
