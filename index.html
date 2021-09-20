@@ -4,7 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Personal portfolio website of Srijit Mondal who is a full stack web developer and a UI/UX designer.">
+    <meta
+      name="description"
+      content="Personal portfolio website of Srijit Mondal who is a full stack web developer and a UI/UX designer."
+    />
     <link
       rel="shortcut icon"
       href="./assests/images/favicon-16x16.png"
@@ -43,12 +46,13 @@
     <title>Srijit Mondal</title>
   </head>
   <body id="scrollbar">
-  
-    <div class="cursor" id="cursor"></div>  <!-- ***************Custom mouse cursor******************** -->
+    <div class="cursor" id="cursor"></div>
+    <!-- ***************Custom mouse cursor******************** -->
 
     <!--*************************** Preloader screen*********************** -->
-    
+
     <div class="preloader" id="preloader">
+      -->
       <!-- These section will be later filled by javascript using h1 tag -->
       <h1 class="preloader__heading">You don't need a website!</h1>
       <div class="preloader__track">
@@ -58,12 +62,8 @@
 
     <!--*************************** Preloader screen*********************** -->
 
-
-
-
     <!--**************************** Header section*************************************** -->
     <header class="header opener">
-     
       <!-- ***********************Navbar links to sections of this page*************************** -->
       <nav class="navbar opener">
         <ul>
@@ -77,16 +77,11 @@
               ><h3><span class="hider">Hire Me</span></h3></a
             >
           </li>
-          <li>
-            <a href="#about"
-              ><h3><span class="hider">About Me</span></h3></a
-            >
-          </li>
         </ul>
       </nav>
-<!-- ***********************Navbar links to sections of this page*************************** -->
+      <!-- ***********************Navbar links to sections of this page*************************** -->
 
-<!-- *************************Social media profile links************************************ -->
+      <!-- *************************Social media profile links************************************ -->
       <ul class="short__links">
         <li>
           <a href="mailto: srijitm906@gmail.com"
@@ -97,9 +92,6 @@
           <a target="__blank" href="https://github.com/srijit2002"
             ><i class="fab fa-github"></i
           ></a>
-        </li>
-        <li>
-          <a target="__blank" href="https://www.linkedin.com/in/srijit7098/"><i class="fab fa-linkedin"></i></a>
         </li>
       </ul>
       <!-- *************************Social media profile links************************************ -->
@@ -121,19 +113,61 @@
         </h1>
       </div>
       <p class="intro__para">
-        Hello I am Srijit Mondal a MERN stack developer, UI/UX designer and
-        a coder based in kolkata,India.I am currently pursuing my B.Tech from
-        IIEST Shibpur. My job is to transform your business into a
-        <span>BRAND</span>.
+        Hello I am Srijit Mondal a full stack developer, UI/UX designer and a
+        coder based in kolkata,India.I am currently pursuing my B.Tech. My job
+        is to transform your business into a
+        <span>BRAND</span>
       </p>
     </section>
 
     <!-- *******************************Projects section *************************************************-->
     <main class="projects flex--center" id="works">
       <h1>My works</h1>
-
       <article class="project flex--center">
-        <a target="__blank" 
+        <a
+          target="__blank"
+          class="flex--center"
+          href="https://task-manager-srijit.firebaseapp.com/"
+        >
+          <img
+            loading="lazy"
+            class="project__img"
+            src="./assests/images/todoapp.png"
+            alt="To-Do list App"
+          />
+        </a>
+        <div class="project__details">
+          <h2 class="project__heading">TO-DO List App</h2>
+          <p class="project__para">
+            Full stack to-do list web app with Email verification. Created using
+            MERN Stack.
+          </p>
+        </div>
+      </article>
+      <article class="project flex--center">
+        <div class="project__details">
+          <h2 class="project__heading">Movie Suggester</h2>
+          <p class="project__para">
+            Website that suggests netflix movies according to their genre and viewer's
+            rating.
+          </p>
+        </div>
+        <a
+          target="__blank"
+          class="flex--center"
+          href="https://srijit2002.github.io/netflix-clone/"
+        >
+          <img
+            loading="lazy"
+            class="project__img"
+            src="./assests/images/movie-recommendation-site.png"
+            alt="Movie Recommedation website"
+          />
+        </a>
+      </article>
+      <article class="project flex--center">
+        <a
+          target="__blank"
           class="flex--center"
           href="https://srijit2002.github.io/travelPlanner.github.io/"
         >
@@ -162,7 +196,11 @@
             feature.Created using React Js and SCSS
           </p>
         </div>
-        <a  target="__blank" class="flex--center" href="https://srijit2002.github.io/codeEditor/">
+        <a
+          target="__blank"
+          class="flex--center"
+          href="https://srijit2002.github.io/codeEditor/"
+        >
           <img
             loading="lazy"
             class="project__img"
@@ -173,12 +211,13 @@
       </article>
 
       <article class="project flex--center">
-        <a target="__blank" 
+        <a
+          target="__blank"
           class="flex--center"
           href="https://srijit2002.github.io/taskmanager/"
         >
           <img
-             loading="lazy"
+            loading="lazy"
             class="project__img"
             src="./assests/images/taskmanager.jpg"
             alt="Taskmanager"
@@ -201,9 +240,13 @@
             using React and Styled Component
           </p>
         </div>
-        <a  target="__blank" class="flex--center" href="https://srijit2002.github.io/foodmenu/">
+        <a
+          target="__blank"
+          class="flex--center"
+          href="https://srijit2002.github.io/foodmenu/"
+        >
           <img
-          loading="lazy"
+            loading="lazy"
             class="project__img"
             src="./assests/images/Food Ordering Site.jpg"
             alt="Food Menu"
@@ -212,12 +255,13 @@
       </article>
 
       <article class="project flex--center">
-        <a target="__blank" 
+        <a
+          target="__blank"
           class="flex--center"
           href="https://srijit2002.github.io/cocktailfinder/"
         >
           <img
-          loading="lazy"
+            loading="lazy"
             class="project__img"
             src="./assests/images/CocktailFinder.jpg"
             alt="Cocktail Receipe Finder"
@@ -240,67 +284,25 @@
             musics.Created using pure Html,Css and Js
           </p>
         </div>
-        <a target="__blank" 
-        class="flex--center"
-        href="https://srijit2002.github.io/medify.github.io/"
-      >
-
-      <img
-      loading="lazy"
-        class="project__img"
-        src="./assests/images/MeditationApp.jpg"
-        alt="Meditation Webapp"
-      /></a>
-      </article>
-
-      <article class="project flex--center">
-        <a target="__blank" 
+        <a
+          target="__blank"
           class="flex--center"
-          href="https://srijit2002.github.io/Testimonials/"
+          href="https://srijit2002.github.io/medify.github.io/"
         >
           <img
-          loading="lazy"
+            loading="lazy"
             class="project__img"
-            src="./assests/images/faqpage.jpg"
-            alt="Testimonial site"
-          />
-        </a>
-        <div class="project__details">
-          <h2 class="project__heading">Testimonial Site</h2>
-          <p class="project__para">
-            Testimonal Website that uses dynamic data.Created using React Js and
-            Styled Component
-          </p>
-        </div>
-      </article>
-
-      <article class="project flex--center">
-     
-        <div class="project__details">
-          <h2 class="project__heading">Javascript Calculator</h2>
-          <p class="project__para">
-            Javascript Calculator with dark and light mode.Created using
-            Html,Scss and Vanilla Js
-          </p>
-        </div>
-        <a target="__blank" 
-        class="flex--center"
-        href="https://srijit2002.github.io/javascriptcalculator.github.io/"
-      >
-        <img
-        loading="lazy"
-          class="project__img"
-          src="./assests/images/javascriptcalculator.jpg"
-          alt="Javascript Calculator"
-        />
-      </a>
+            src="./assests/images/MeditationApp.jpg"
+            alt="Meditation Webapp"
+        /></a>
       </article>
     </main>
 
     <!-- *************************Precontact request section *****************************-->
     <section class="request" id="about">
       <p class="request__para">
-        I am always available for work so if you want to make a website for you business or yourself. You can contact me any time :-)
+        I am always available for work so if you want to make a website for you
+        business or yourself. You can contact me any time. 
       </p>
     </section>
 
@@ -316,21 +318,15 @@
           </li>
           <li class="flex--center social__links">
             <i class="fab fa-github"></i
-            ><a target="__blank" href="https://github.com/srijit2002">srijit2002</a>
-          </li>
-          <li class="flex--center social__links">
-            <i class="fab fa-linkedin"></i
-            ><a target="__blank" href="https://www.linkedin.com/in/srijit7098/">Srijit Mondal</a>
+            ><a target="__blank" href="https://github.com/srijit2002"
+              >srijit2002</a
+            >
           </li>
         </ul>
         <!-- ******************Footer link***************************** -->
 
         <!-- ****************Contact us form********************** -->
-        <form
-          class="form"
-          action="https://formspree.io/f/xbjqkjlj"
-          method="POST"
-        >
+        <form class="form" id="form">
           <div class="form__contact">
             <input
               required="true"
@@ -349,23 +345,30 @@
               placeholder="Email"
             />
           </div>
-          <textarea
-            required="true"
-            class="form__des input"
-            name="description"
-            id="desc"
-            cols="30"
-            rows="10"
-            placeholder="Describe what type of website you want"
-          ></textarea>
-          <button class="btn" type="submit">Send</button>
+          <div class="form__desc">
+            <textarea
+              required="true"
+              class="form__des input"
+              name="body"
+              id="body"
+              cols="30"
+              rows="10"
+              placeholder="Describe what type of website you want"
+            ></textarea>
+          </div>
+
+          <button class="btn btn--submit" type="submit">Send</button>
         </form>
       </div>
-        <!-- ****************Contact us form********************** -->
+      <!-- ****************Contact us form********************** -->
+      <div class="alert" id="alert">Thanks I will reach you soon</div>
     </footer>
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js"></script><!--  gsap library -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/ScrollTrigger.min.js"></script><!--  gsap scrolltrigger plugin library -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js"></script>
+    <!--  gsap library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/ScrollTrigger.min.js"></script>
+    <!--  gsap scrolltrigger plugin library -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script defer src="./scripts/index.js"></script>
   </body>
 </html>

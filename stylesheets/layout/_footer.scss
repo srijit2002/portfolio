@@ -8,7 +8,7 @@
     margin-top:2em;
     padding:3em;
     background-color: map-get($colors,'bgtext');
-   
+   position: relative;
     &__heading{
         position: relative;
         text-align: center;
@@ -29,9 +29,9 @@
 }
 .form{
     display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-    flex-flow:column wrap;
+    align-items:stretch;
+    justify-content: center;
+    flex-direction: column;
     min-width:55vw;
     &__contact{
         display: flex;
@@ -42,6 +42,7 @@
     &__des{
         margin: 0.9em 0;
         width:100%;
+        flex:1;
     }
     &__name{
         margin-right: 0.9em;
@@ -52,7 +53,9 @@
     }
 }
         
-       
+ .btn--submit{
+     align-self: flex-end;
+ }      
 @media(max-width:820px){
     .form{
        justify-content: space-between;
@@ -95,6 +98,7 @@
         &__des{
             margin: 0.9em 0;
        }
+      
         &__name{
             margin-right: 0;
             margin-bottom: 0.9em;

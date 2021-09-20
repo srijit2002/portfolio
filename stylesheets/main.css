@@ -160,6 +160,7 @@ img {
   font-family: "Roboto", sans-serif;
   resize: vertical;
   flex: 1 1 100%;
+  width: 100%;
 }
 
 .scrollbar {
@@ -341,10 +342,34 @@ img {
     display: flex;
   }
 }
+.alert {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  display: none;
+  transform: translateX(-50%);
+  font-size: 1.1rem;
+  font-family: "Roboto", sans-serif;
+  padding: 0.1em 0.5em;
+  background-color: #fafafa;
+  color: #000;
+  border-radius: 0.1em;
+  width: 50ch;
+  text-align: center;
+}
+
+@media (max-width: 528px) {
+  .alert {
+    width: 80%;
+    bottom: 24%;
+    font-size: 1rem;
+  }
+}
 .footer {
   margin-top: 2em;
   padding: 3em;
   background-color: #0a0a0a;
+  position: relative;
 }
 .footer__heading {
   position: relative;
@@ -371,9 +396,9 @@ img {
 
 .form {
   display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  flex-flow: column wrap;
+  align-items: stretch;
+  justify-content: center;
+  flex-direction: column;
   min-width: 55vw;
 }
 .form__contact {
@@ -385,6 +410,7 @@ img {
 .form__des {
   margin: 0.9em 0;
   width: 100%;
+  flex: 1;
 }
 .form__name {
   margin-right: 0.9em;
@@ -392,6 +418,10 @@ img {
 }
 .form__email {
   width: 100%;
+}
+
+.btn--submit {
+  align-self: flex-end;
 }
 
 @media (max-width: 820px) {

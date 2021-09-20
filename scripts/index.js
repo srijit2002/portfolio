@@ -38,16 +38,16 @@ projects.forEach((project)=>{
 })
 
 
-// Enlarging the heading quate at center on opening*****************************************
+// // Enlarging the heading quate at center on opening*****************************************
 const enlargeCenter=()=>{
   const center=document.querySelector(".center");
   center.style.transform="scale(600)";
   center.addEventListener("webkitTransitionEnd",()=>{
     preloader.style.display="none";
    
-// Animation on opening
+// // Animation on opening
 
-// underline animation of navbar****************************************************************
+// // underline animation of navbar****************************************************************
 const opener= gsap.utils.toArray(".opener");
 opener.forEach((item) => {
   const tl = gsap.timeline();
@@ -57,7 +57,7 @@ opener.forEach((item) => {
     duration:1.6
   })
 });
-// text reveal animation of navbar links*****************************************************
+// // text reveal animation of navbar links*****************************************************
 const hiders=gsap.utils.toArray(".hider");
 hiders.forEach((hider) => {
  gsap.fromTo(hider, {y:'100%',x:0}, {y:'0%',x:0, delay:1.5,duration: 1,ease:'power1.out'});
@@ -72,7 +72,7 @@ gsap.from(".intro__para",{
 }
 
 
-//*****Animation at opener quate section*************************************************
+// //*****Animation at opener quate section*************************************************
 
 const preloaderTimeline=gsap.timeline();
 const preloader=document.getElementById("preloader");
@@ -137,3 +137,28 @@ document.querySelectorAll(".project__details").forEach((para)=>{
   })
 })
 
+const alert=document.getElementById("alert");
+const handleSubmit=async()=>{
+  const name=document.getElementById("name").value;
+  const email=document.getElementById("email").value;
+  const body=document.getElementById("body").value;
+  try {
+    const response=await axios.post("http://localhost:8000/portfolio/contact/submit",{name,email,body});
+    document.getElementById("name").value="";
+    document.getElementById("email").value="";
+    document.getElementById("body").value="";
+    alert.innerHTML=response.data.msg;
+    alert.style.display="block";
+    setTimeout(() => {
+      alert.style.display="none";
+    }, 5000);
+  } catch (error) {
+    console.log(error);
+  }
+ 
+}
+const form=document.getElementById("form");
+form.addEventListener("submit",(e)=>{
+  e.preventDefault();
+  handleSubmit()
+})
