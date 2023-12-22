@@ -1,0 +1,28 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+@use "../abstracts" as *;
+@use "../base" as *;
+.btn{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    min-width:8ch;
+    font-size: 1.4rem;
+    font-family:map-get($font,'linktext'),sans-serif;
+    padding:0.1em 0.5em;
+    color:map-get($colors,'secondary');
+    background-color: map-get($colors,'primary');
+    border:1px solid map-get($colors,'secondary');
+    @include createTransition($property:all,$time:map-get($transitionTime,'fas'),$timingFunc:ease);
+    &:hover,&:focus{
+        background-color: map-get($colors,'secondary');
+        color: map-get($colors,'primary');
+    }
+}
+
+@media(max-width:366px){
+    .btn{
+        font-size:1.2rem;
+    }
+}

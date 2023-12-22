@@ -1,0 +1,58 @@
+@use "../abstracts" as *;
+@use "../base" as *;
+
+
+.cursor{
+    display: none;
+    position: absolute;
+    @include stylesForCircle($radius:40px,$bg-Clr:map-get($colors,'cursorclr'),$stroke-width:2px,$stroke-clr:map-get($colors,'secondary'));
+    pointer-events: none;
+    mix-blend-mode: difference;
+    z-index:3;
+    &::before{
+        @include stylesForPseudoElement($content:"",$width:4px,$height:4px,$top:50%,$left:50%);
+        background-color: map-get($colors,'secondary');
+        transform: translate(-50%,-50%);
+    }
+}
+.pointer{
+    position: absolute;
+    pointer-events: none;
+    z-index:map-get($zIndex,'above');
+    perspective: 170px;
+    
+&__text{
+    position: absolute;
+    color:map-get($colors,'secondary');
+    font-family:map-get($font,'primary--rg'),sans-serif;
+    font-size: 0.7rem;
+    animation: rotate 5s linear infinite;
+    }
+}
+@keyframes rotate{
+    0%{
+        transform:rotateX(60deg) rotateY(-20deg) rotateZ(0deg);
+    }
+    100%{
+        transform:rotateX(60deg) rotateY(-20deg) rotateZ(360deg);
+    }
+}
+
+
+.letter{
+    position: absolute;
+    top:-50px;
+    display: inline-block;
+    text-transform: uppercase;
+    transform-origin: 0 50px;
+}
+
+
+
+@media (hover: hover) {
+    .cursor{
+        display:initial;
+    }
+  
+}
+      

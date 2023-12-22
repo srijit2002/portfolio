@@ -1,0 +1,28 @@
+.cursor {
+  display: none;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #0000008c;
+  transform: translate(-50%, -50%);
+  border: 2px solid #fafafa;
+  pointer-events: none;
+  mix-blend-mode: difference;
+  z-index: 3;
+}
+.cursor::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 4px;
+  height: 4px;
+  background-color: #fafafa;
+  transform: translate(-50%, -50%);
+}
+@media (hover: hover) {
+  .cursor {
+    display: initial;
+  }
+}
