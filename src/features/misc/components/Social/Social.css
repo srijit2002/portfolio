@@ -48,3 +48,10 @@
     object-fit: cover;
     transition: all 500ms ease;
 }
+
+@media (max-width: 520px) {
+    .social {
+      padding: 1em 3em;
+    }
+  }
+  

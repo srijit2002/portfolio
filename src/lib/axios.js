@@ -1,5 +1,7 @@
 import axios from "axios";
 
-const axiosInstace = axios.create({ baseURL: "http://127.0.0.1:8000" });
+const axiosInstace = axios.create({
+  baseURL: "https://portfolio-backend-v6ux.onrender.com",
+});
 
 export default axiosInstace;

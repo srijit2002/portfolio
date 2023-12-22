@@ -1,0 +1,3 @@
+.form__contact >input::placeholder, textarea::placeholder{
+    font-family: Bebas Neue ,'sans-serif';
+}

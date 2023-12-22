@@ -1,5 +1,4 @@
-
-export const Navbar = () => {
+export const Navbar = ({ hasLoaded }) => {
   return (
     <header className="header opener">
       <nav className="navbar opener">
@@ -7,14 +6,24 @@ export const Navbar = () => {
           <li>
             <a href="#works">
               <h3>
-                <span className="hider">Projects</span>
+                <span
+                  className="hider"
+                  style={{ transform: `translateY(${hasLoaded ? 0 : 100}%)` }}
+                >
+                  Projects
+                </span>
               </h3>
             </a>
           </li>
           <li>
             <a href="#hire">
               <h3>
-                <span className="hider">Hire Me</span>
+                <span
+                  className="hider"
+                  style={{ transform: `translateY(${hasLoaded ? 0 : 100}%)` }}
+                >
+                  Hire Me
+                </span>
               </h3>
             </a>
           </li>

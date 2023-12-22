@@ -1,54 +1,63 @@
-.education{
-    padding:2em 6em;
+.education {
+  padding: 2em 6em;
 }
-.education_title{
-    text-align: center;
-    font-size: 9vw;
-    font-family: "monument_extendedultrabold";
-    margin-bottom: 0.5em;
+.education_title {
+  text-align: center;
+  font-size: 9vw;
+  font-family: "monument_extendedultrabold";
+  margin-bottom: 0.5em;
 }
-.education_institutes{
-    display: flex;
-    flex-direction: column;
-    gap:3em;
+.education_institutes {
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
 }
-.education_institute{
-    display: flex;
-    flex-direction: column;
-    border-bottom: 0.1em solid white;
-    padding-bottom: 1em;
-    background-color: #0c0c0c;
+.education_institute {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 0.1em solid white;
+  padding-bottom: 1em;
+  background-color: #0c0c0c;
+  padding: 1em 2em;
+  border-radius: 0.2em;
+}
+.education_institute_header {
+  display: flex;
+  flex-direction: column;
+}
+.education_institute_title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.education_institute_title h3 {
+  font-size: 2.5rem;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-stretch: expanded;
+}
+.education_institute_title h4 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-stretch: expanded;
+}
+.education_institute_school {
+  margin-top: -1em;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #8c8c8c;
+}
+.education_institute_para {
+  margin-top: 1.2em;
+  font-family: "Roboto", sans-serif;
+}
+@media (max-width: 520px) {
+  .education {
     padding: 1em 2em;
-    border-radius: 0.2em;
-}
-.education_institute_header{
-    display: flex;
-    flex-direction: column;
-}
-.education_institute_title{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.education_institute_title h3{
-    font-size: 2.5rem;
-    font-family: 'Bebas Neue', sans-serif;
-    font-weight:400;
-    font-stretch: expanded;
-}
-.education_institute_title h4{
-    font-family: 'Roboto',sans-serif;
-    font-weight:400;
-    font-stretch: expanded;
-}
-.education_institute_school{
-    margin-top: -1em;
-    font-family: 'Roboto',sans-serif;
-    font-size: 0.8rem;
-    font-weight: 400;
-    color: #8c8c8c;
-}
-.education_institute_para{
-    margin-top: 1.2em;
-    font-family: 'Roboto',sans-serif;
+  }
+  .education_institute_title h3{
+    font-size: 1.6rem;
+    margin-bottom: 0.4em;
+  }
 }

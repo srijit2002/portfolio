@@ -1,24 +1,32 @@
-.skills{
-    padding: 2em 6em;
+.skills {
+  padding: 2em 6em;
 }
-.skills_heading{
-    text-align: center;
-    font-size: 9vw;
-    font-family: "monument_extendedultrabold";
-    margin-bottom: 0.3em;
+.skills_heading {
+  text-align: center;
+  font-size: 9vw;
+  font-family: "monument_extendedultrabold";
+  margin-bottom: 0.3em;
 }
-.skills_items{
-    display: flex;
-    gap:0.8em;
-    flex-wrap: wrap;
+.skills_items {
+  display: flex;
+  gap: 0.8em;
+  flex-wrap: wrap;
 }
-.skills_item{
-    font-size: 1.1rem;
-    font-family: 'Roboto',sans-serif;
-    border: 0.1em solid #fff;
-    min-width: 10ch;
-    text-align: center;
-    padding: 0.4em 1em;
-    border-radius: 5em;
-    background-color: #0c0c0c;
+.skills_item {
+  font-size: 1.1rem;
+  font-family: "Roboto", sans-serif;
+  border: 0.1em solid #fff;
+  min-width: 10ch;
+  text-align: center;
+  padding: 0.4em 1em;
+  border-radius: 5em;
+  background-color: #0c0c0c;
+}
+@media (max-width: 520px) {
+  .skills {
+    padding: 1em 3em;
+  }
+  .skills_item {
+    font-size: 0.8rem;
+  }
 }
