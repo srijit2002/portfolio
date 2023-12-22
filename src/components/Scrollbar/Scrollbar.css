@@ -1,0 +1,33 @@
+.scrollbar {
+  position: fixed;
+  top: 50%;
+  left: 3%;
+  transform: translate(-50%, -50%);
+  width: 1.5px;
+  height: 77vh;
+  background-color: #fafafa;
+  z-index: 3;
+}
+.scrollbar__thumb {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: transparent;
+  transform: translate(-50%, -50%);
+  border: 2px solid #fafafa;
+}
+.scrollbar__thumb::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #fafafa;
+  transform: translate(-50%, -50%);
+  border: 2px solid #fafafa;
+}
