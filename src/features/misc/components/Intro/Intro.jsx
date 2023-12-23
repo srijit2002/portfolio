@@ -1,24 +1,22 @@
 import "./Intro.css";
 
-export const Intro = ({ hasLoaded }) => {
+export const Intro = () => {
   return (
     <section className="intro">
       <div className="intro__title">
         <h1 className="intro__heading">
           <span
-            className="hider"
-            style={{ transform: `translateY(${hasLoaded ? 0 : 100}%)` }}
+            className="hider up-slider"
+            style={{ transform: `translateY(100%)` }}
           >
             Hi I am
           </span>
         </h1>
         <h1 className="intro__heading">
           <span
-            className="hider"
+            className="hider up-slider"
             style={{
-              transform: `translateY(${hasLoaded ? 0 : 100}%)`,
-              opacity: hasLoaded ? 1 : 0,
-              transitionDelay: "120ms",
+              animationDelay: "2600ms",
             }}
           >
             Srijit
@@ -26,13 +24,7 @@ export const Intro = ({ hasLoaded }) => {
         </h1>
       </div>
       <p className="intro__para">
-        <span
-          className="hider"
-          style={{
-            transform: `translateX(${hasLoaded ? 0 : 100}%)`,
-            opacity: hasLoaded ? 1 : 0,
-          }}
-        >
+        <span className="hider left-slider">
           Hello, I&apos;m Srijit Mondal, a computer science student with a deep
           passion for operating systems, database internals, computer networks,
           data structures and algorithms. Currently pursuing my bachelor&apos;s

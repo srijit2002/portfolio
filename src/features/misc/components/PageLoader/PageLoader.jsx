@@ -1,21 +1,8 @@
 import "./PageLoader.css";
-import { useState, useEffect } from "react";
 
-export const PageLoader = ({ onLoad }) => {
-  const [hasLoaded, setHasLoaded] = useState(false);
-
-  useEffect(() => {
-    const handleLoad = () => {
-      setHasLoaded(true);
-      onLoad();
-    };
-    window.addEventListener("load", handleLoad);
-    return () => {
-      window.removeEventListener("load", handleLoad);
-    };
-  }, [onLoad]);
+export const PageLoader = () => {
   return (
-    <section className={`pageloader ${hasLoaded ? "clip-path-opener" : ""}`}>
+    <section className="pageloader">
       <main className="pageloader_content">
         <h2 className="pageloader_title">
           Making Computers Do Things Since 2002

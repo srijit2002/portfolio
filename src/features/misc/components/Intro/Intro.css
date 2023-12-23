@@ -85,3 +85,33 @@
 .intro_para {
   overflow: hidden;
 }
+.left-slider {
+  transform: translateX(100%);
+  opacity: 0;
+  animation: left-slide 1s ease 2.3s forwards;
+}
+@keyframes left-slide {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+.up-slider {
+  transform: translateY(100%);
+  opacity: 0;
+  animation: up-slide 1s ease 2.2s forwards;
+}
+@keyframes up-slide {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
