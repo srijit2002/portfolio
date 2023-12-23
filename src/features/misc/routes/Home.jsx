@@ -11,12 +11,12 @@ import { useState } from "react";
 export const Home = () => {
   const [hasLoaded, setHasLoaded] = useState(false);
   const handleDelay = () => {
-    window.setTimeout(() => setHasLoaded(true), 800);
+    window.setTimeout(() => setHasLoaded(true), 3500);
   };
   return (
     <>
       <PageLoader onLoad={handleDelay} />
-      <Navbar hasLoaded={hasLoaded}/>
+      <Navbar hasLoaded={hasLoaded} />
       <Intro hasLoaded={hasLoaded} />
       <Education />
       <Skills />

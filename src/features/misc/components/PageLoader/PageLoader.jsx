@@ -16,13 +16,12 @@ export const PageLoader = ({ onLoad }) => {
   }, [onLoad]);
   return (
     <section className={`pageloader ${hasLoaded ? "clip-path-opener" : ""}`}>
-      <div className="spinner-box">
-        <div className="pulse-container">
-          <div className="pulse-bubble pulse-bubble-1"></div>
-          <div className="pulse-bubble pulse-bubble-2"></div>
-          <div className="pulse-bubble pulse-bubble-3"></div>
-        </div>
-      </div>
+      <main className="pageloader_content">
+        <h2 className="pageloader_title">
+          Making Computers Do Things Since 2002
+        </h2>
+        <h3 className="pageloader_subtitle">They Still Don&apos;t Listen.</h3>
+      </main>
     </section>
   );
 };
