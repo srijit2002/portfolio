@@ -18,6 +18,7 @@ export const Intro = ({ hasLoaded }) => {
             style={{
               transform: `translateY(${hasLoaded ? 0 : 100}%)`,
               opacity: hasLoaded ? 1 : 0,
+              transitionDelay: "120ms",
             }}
           >
             Srijit
