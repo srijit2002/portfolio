@@ -18,7 +18,7 @@ export const Education = () => {
   ];
   return (
     <section className="education">
-      <h2 className="education_title">Education</h2>
+      <h2 className="section_heading">[Education]</h2>
       <section className="education_institutes">
         {educations.map((education) => (
           <article key={education.degree} className="education_institute" data-aos="fade-down">

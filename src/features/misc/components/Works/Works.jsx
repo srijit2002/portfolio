@@ -13,7 +13,7 @@ export const Works = () => {
   }, []);
   return (
     <main className="projects flex--center" id="works">
-      <h1>Works</h1>
+      <h1 className="section_heading">[Works]</h1>
       {Projects?.map((work, index) => (
         <Work
           work={work}

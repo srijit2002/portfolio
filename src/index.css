@@ -603,3 +603,11 @@ img {
   word-wrap: break-word;
   hyphens: auto;
 }
+
+.section_heading {
+  font-size: 1.5rem;
+  font-family: Bebas Neue,sans-serif;
+  text-align: center;
+  font-weight: 100;
+  font-stretch: extra-expanded;
+}

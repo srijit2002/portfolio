@@ -1,12 +1,7 @@
 .skills {
   padding: 2em 6em;
 }
-.skills_heading {
-  text-align: center;
-  font-size: 9vw;
-  font-family: "monument_extendedultrabold";
-  margin-bottom: 0.3em;
-}
+
 .skills_items {
   display: flex;
   gap: 0.8em;

@@ -3,24 +3,31 @@ import Twitter from "@/assests/images/twitter.jpg";
 import Github from "@/assests/images/github.jpg";
 import Linkedin from "@/assests/images/linkedin.jpg";
 import Leetcode from "@/assests/images/leetcode.png";
+import { FaLinkedinIn, FaTwitter, FaGithub } from "react-icons/fa";
+import { SiLeetcode } from "react-icons/si";
 
 export const Social = () => {
   const socials = [
     {
-      title: "Linkedin",
+      title: <FaLinkedinIn />,
       url: "https://www.linkedin.com/in/srijit7098/",
       bg: Linkedin,
     },
     {
-      title: "X (Twitter)",
+      title: <FaTwitter />,
       url: "https://twitter.com/srijitmondal02",
       bg: Twitter,
     },
-    { title: "Github", url: "https://github.com/srijit2002", bg: Github },
-    { title: "Leetcode", url: "https://leetcode.com/onlyerror/", bg: Leetcode },
+    { title: <FaGithub />, url: "https://github.com/srijit2002", bg: Github },
+    {
+      title: <SiLeetcode />,
+      url: "https://leetcode.com/onlyerror/",
+      bg: Leetcode,
+    },
   ];
   return (
     <section className="social">
+      <h1 className="section_heading">[Socials]</h1>
       <ul className="social_list">
         {socials.map((social) => (
           <a

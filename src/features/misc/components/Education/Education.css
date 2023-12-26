@@ -1,12 +1,6 @@
 .education {
   padding: 2em 6em;
 }
-.education_title {
-  text-align: center;
-  font-size: 9vw;
-  font-family: "monument_extendedultrabold";
-  margin-bottom: 0.5em;
-}
 .education_institutes {
   display: flex;
   flex-direction: column;

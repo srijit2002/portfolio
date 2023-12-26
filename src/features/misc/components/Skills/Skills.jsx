@@ -22,7 +22,7 @@ export const Skills = () => {
   ];
   return (
     <section className="skills">
-      <h2 className="skills_heading">Skills</h2>
+      <h2 className="section_heading">[Skills]</h2>
       <section className="skills_items" data-aos="fade-down">
         {skills.map((skill) => (
           <article key={skill} className="skills_item" >
